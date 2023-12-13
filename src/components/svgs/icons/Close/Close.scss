@@ -1,0 +1,9 @@
+@import '../../../../styles/variables.scss';
+
+.icon-close {
+  color: $main-white;
+
+  svg {
+    width: 1rem;
+  }
+}

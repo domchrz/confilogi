@@ -1,0 +1,9 @@
+@import '../../../../styles/variables.scss';
+
+.icon-hamburger {
+  color: $secondary-blue;
+
+  svg {
+    width: 1.125rem;
+  }
+}
