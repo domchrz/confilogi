@@ -1,0 +1,9 @@
+@import '../../../../styles/variables.scss';
+
+.icon-arrow {
+  color: $main-blue;
+
+  svg {
+    width: 1.25rem;
+  }
+}

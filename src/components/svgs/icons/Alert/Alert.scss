@@ -1,0 +1,9 @@
+@import '../../../../styles/variables.scss';
+
+.icon-alert {
+  color: $main-red;
+
+  svg {
+    width: 1.25rem;
+  }
+}

@@ -34,7 +34,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/template.html'),
-      favicon: './src/favicon.png'
+      favicon: './src/favicon.png',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
@@ -61,7 +61,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
         type: 'asset/resource',
       },
     ],
