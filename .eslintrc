@@ -19,7 +19,11 @@
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "semi": [2, "always"],
-    "indent": ["error", 2, {"SwitchCase": 1}],
+    "indent": [
+      "error",
+      2,
+      { "flatTernaryExpressions": false, "SwitchCase": 1 }
+    ],
     "object-curly-spacing": ["error", "always"],
     "max-len": ["error", { "code": 100 }],
     "no-multi-spaces": "error"
