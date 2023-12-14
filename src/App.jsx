@@ -1,4 +1,5 @@
 import './App.scss';
+import MatchMedia from './components/shared/MatchMedia';
 import {
   ArrowIcon,
   CloseIcon,
@@ -39,10 +40,21 @@ export default function App() {
       <FeaturesTab2 />
       <FeaturesTab3 />
       <HeroPicture />
-      <BookmarkLogo />
-      <ChromeLogo />
-      <FirefoxLogo />
-      <OperaLogo />
+      <MatchMedia>
+        {(isDesktop) => (
+          <>
+            {isDesktop ? (
+              <>
+                <ChromeLogo />
+                <OperaLogo />
+                <FirefoxLogo />
+              </>
+            ) : (
+              <BookmarkLogo />
+            )}
+          </>
+        )}
+      </MatchMedia>
     </div>
   );
 }
