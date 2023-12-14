@@ -1,4 +1,5 @@
 import './App.scss';
+import Button from './components/shared/Button';
 import MatchMedia from './components/shared/MatchMedia';
 import {
   ArrowIcon,
@@ -27,6 +28,17 @@ export default function App() {
       <header>
         <h1>Hello App!</h1>
       </header>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '.5rem',
+        padding: '1rem',
+        backgroundColor: 'white'
+      }}>
+        <Button>Get it on Chrome</Button>
+        <Button mode="secondary">Get it on Firefox</Button>
+        <Button mode="action">Get it on Opera</Button>
+      </div>
       <p>Welcome to the app</p>
       <div>
         <AlertIcon />

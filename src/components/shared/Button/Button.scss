@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.9rem 3.5rem;
+  font-family: 'Rubik';
+  font-size: 1rem;
+  font-weight: 500;
+  border: 0.22rem solid transparent;
+  border-radius: 0.35rem;
+  transition: color 0.4s;
+  cursor: pointer;
+}
+
+.btn--primary:hover,
+.btn--action:hover,
+.btn--secondary:hover {
+  background-color: $main-white;
+}
+
+.btn--primary,
+.btn--action {
+  color: $main-white;
+  transition: background-color 0.4s;
+}
+
+.btn--primary {
+  background-color: $main-blue;
+  border-color: $main-blue;
+}
+
+.btn--primary:hover {
+  color: $main-blue;
+}
+
+.btn--action {
+  background-color: $main-red;
+  border-color: $main-red;
+}
+
+.btn--action:hover {
+  color: $main-red;
+}
+
+.btn--secondary {
+  color: $secondary-grey;
+  background-color: $main-white;
+  box-shadow: hsl(0, 0, 80%) 0 0.0625rem 0.25rem;
+  transition: border-color 0.4s;
+}
+
+.btn--secondary:hover {
+  border-color: $secondary-grey;
+}
