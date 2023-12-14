@@ -13,17 +13,20 @@
   font-weight: 500;
   border: 0.22rem solid transparent;
   border-radius: 0.35rem;
-  transition: color .4s;
+  transition: color 0.4s;
   cursor: pointer;
 }
 
-.btn--primary:hover, .btn--action:hover, .btn--secondary:hover {
+.btn--primary:hover,
+.btn--action:hover,
+.btn--secondary:hover {
   background-color: $main-white;
 }
 
-.btn--primary, .btn--action {
+.btn--primary,
+.btn--action {
   color: $main-white;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 .btn--primary {
@@ -47,12 +50,10 @@
 .btn--secondary {
   color: $secondary-grey;
   background-color: $main-white;
-  box-shadow: hsl(0, 0 , 80%) 0px 1px 4px;
-  transition: border-color .4s;
+  box-shadow: hsl(0, 0, 80%) 0 0.0625rem 0.25rem;
+  transition: border-color 0.4s;
 }
 
 .btn--secondary:hover {
   border-color: $secondary-grey;
 }
-
-
