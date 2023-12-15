@@ -5,9 +5,10 @@
   place-items: center;
   width: 100%;
   background-color: $main-white;
+  z-index: -2;
 }
 
 .layout__wrapper {
   width: 100%;
-  max-width: 70rem;
+  max-width: 100rem;
 }

@@ -1,0 +1,148 @@
+@import '../../../styles/variables.scss';
+
+.header {
+  display: grid;
+  width: 100%;
+  row-gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.header--mobile {
+  grid-template-rows: 1fr 1fr;
+
+  .header__hero-picture {
+    grid-row: 1;
+  }
+
+  .header__content {
+    grid-row: 2;
+  }
+
+  .header__content {
+    text-align: center;
+  }
+}
+
+.header__hero-picture {
+  position: relative;
+  align-self: center;
+  z-index: 1;
+}
+
+.header__content {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  h1 {
+    font-weight: 500;
+  }
+
+  p {
+    color: $main-grey;
+    letter-spacing: 0.1rem;
+    line-height: 1.9rem;
+  }
+
+  button:nth-of-type(2) {
+    justify-self: start;
+  }
+
+  button:first-of-type {
+    justify-self: end;
+  }
+}
+
+.header__content-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header__button-wrapper {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+  column-gap: .5rem;
+}
+
+.header__hero-picture::before {
+  content: '';
+  position: absolute;
+  left: 20%;
+  top: 22%;
+  background-color: $main-blue;
+  height: 78%;
+  width: 80%;
+  border-bottom-left-radius: 25%;
+  z-index: -1;
+}
+
+.header--desktop {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  margin-top: clamp(1.5rem, 2vw, 5rem);
+
+  h1 {
+    font-size: clamp(2.25rem, 3vw, 3.5rem);
+  }
+
+  .header__hero-picture {
+    position: relative;
+    align-self: center;
+    z-index: 1;
+  }
+
+  .header__hero-picture::before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    background-color: $main-blue;
+    height: 70%;
+    width: 80%;
+    border-bottom-left-radius: 30%;
+    z-index: -1;
+  }
+
+  .header__hero-picture::after {
+    content: '';
+    position: absolute;
+    left: 90%;
+    top: 30%;
+    background-color: $main-blue;
+    height: 70%;
+    width: 50vw;
+    z-index: -1;
+  }
+
+  .header__hero-picture {
+    position: relative;
+    align-self: center;
+    z-index: 1;
+    width: 50vw;
+    max-width: 50rem;
+  }
+
+  .header__button-wrapper {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    column-gap: .5rem;
+    width: min-content;
+
+    button {
+      justify-self: center;
+      width: 11rem;
+    }
+  }
+
+  p {
+    padding-right: clamp(0rem, 2.5vw, 5rem);
+  }
+}
