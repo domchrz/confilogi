@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@400;500&display=swap');
 @import './variables.scss';
 
-.app {
+body {
+  
   font-family: 'Rubik';
   font-size: 1.125rem;
   color: $main-font;
+  overflow-x: hidden;
 
   & *,
   & *::after,
@@ -19,11 +21,11 @@
     font-weight: 500;
     color: $main-font;
   }
+}
 
-  p {
-    letter-spacing: $p-letter-spacing;
-    line-height: $p-line-height;
-  }
+p {
+  letter-spacing: $p-letter-spacing;
+  line-height: $p-line-height;
 }
 
 

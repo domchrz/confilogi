@@ -22,7 +22,7 @@ export default function Faq() {
       <div className="faq__content">
         <h2>Frequently Asked Questions</h2>
         <p>
-          Here are some of our FAQs. If you have any other questions you'd like
+          Here are some of our FAQs. If you have any other questions you&#39;d like
           answered please feel free to email us.
         </p>
       </div>
