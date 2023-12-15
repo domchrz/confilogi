@@ -2,6 +2,7 @@ import './Faq.scss';
 import AccordionTab from './AccordionTab';
 import useSelector from '../../../hooks/useSelector';
 import useDispatch from '../../../hooks/useDispatch';
+import Button from '../../shared/Button';
 
 export default function Faq() {
   const areTabsActive = useSelector((state) => state.faq);
@@ -68,6 +69,7 @@ export default function Faq() {
           Eligendi, aut facilis?
         </AccordionTab>
       </div>
+      <Button width="9rem">More info</Button>
     </section>
   );
 }

@@ -8,10 +8,20 @@
   flex-direction: column;
   justify-content: space-between;
   gap: rem;
+  color: $main-white;
   padding: 2rem 1.8rem;
   width: 100%;
   background-color: $transparent-blue;
   z-index: 2000;
+
+  i {
+    transition: color .4s;
+    cursor: pointer;
+  }
+
+  i:hover {
+    color: $main-red;
+  }
 }
 
 .nav__mobile-menu-header {

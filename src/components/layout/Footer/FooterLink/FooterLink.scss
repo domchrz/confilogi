@@ -1,0 +1,24 @@
+@import '../../../../styles/variables.scss';
+
+.footer__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 8rem;
+  font-family: 'Rubik';
+  padding: .5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: $light-grey;
+  letter-spacing: 0.1rem;
+  border-radius: 0.35rem;
+  transition: color 0.4s;
+  cursor: pointer;
+}
+
+.footer__link:hover {
+  color: $main-red;
+}

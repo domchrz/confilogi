@@ -3,7 +3,7 @@ import useCountdown from '../../../hooks/useCountdown';
 import Observer from './Observer';
 import Form from './Form';
 
-export default function Newsletter() {
+export default function Newsletter({ isMobile }) {
   const { number, startInterval } = useCountdown(35000, 100, 20);
 
   const getNumberAsString = (num) => {
@@ -27,7 +27,7 @@ export default function Newsletter() {
         </p>
       </Observer>
       <h2>Stay up-to-date with what we&#39;re doing</h2>
-      <Form />
+      <Form isMobile={isMobile} />
     </section>
   );
 }

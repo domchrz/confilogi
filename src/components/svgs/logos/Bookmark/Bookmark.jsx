@@ -1,11 +1,15 @@
 import Standard from '../../../../assets/logos/logo-bookmark.svg';
-import Alternative from '../../../../assets/logos/logo-bookmark-mobile.svg';
+import Mobile from '../../../../assets/logos/logo-bookmark-mobile.svg';
+import Footer from '../../../../assets/logos/logo-bookmark-footer.svg';
 import './Bookmark.scss';
 
-export default function BookmarkLogo({ isMobileMenu = false }) {
+export default function BookmarkLogo({
+  isMobileMenu = false,
+  isFooterLogo = false,
+}) {
   return (
     <picture className="picture-bookmark" aria-label="bookmark logo">
-      {isMobileMenu ? <Alternative /> : <Standard />}
+      {isFooterLogo ? <Footer /> : isMobileMenu ? <Mobile /> : <Standard />}
     </picture>
   );
 }
