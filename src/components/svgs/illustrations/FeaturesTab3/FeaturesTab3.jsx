@@ -1,10 +1,10 @@
 import Svg from '../../../../assets/illustrations/illustration-features-tab-3.svg';
 import './FeaturesTab3.scss';
 
-export default function FeaturesTab3() {
+export default function FeaturesTab3({ width = null }) {
   return (
     <picture className="picture-features-tab-3" aria-label="feature image">
-      <Svg />
+      <Svg style={{ width }} />
     </picture>
   );
 }
