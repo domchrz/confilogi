@@ -14,14 +14,20 @@
   }
 }
 
+.newsletter__form--desktop {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  max-width: 30rem;
+}
+
 .newsletter__form-input-container {
   margin-top: 1rem;
   position: relative;
   width: 100%;
-  border-top-left-radius: .35rem;
-  border-top-right-radius: .35rem;
+  border-radius: .35rem;;
   background-color: transparent;
-  transition: background-color .4s;
 }
 
 .newsletter__form-input-container.error {
@@ -46,7 +52,6 @@
   font-size: 1rem;
   width: 100%;
   border: .25rem solid transparent;
-  transition: border-color .4s;
 }
 
 .newsletter__form-input.error {
@@ -57,5 +62,5 @@
   position: absolute;
   top: 50%;
   right: 1rem;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% - 0.5rem));
 }

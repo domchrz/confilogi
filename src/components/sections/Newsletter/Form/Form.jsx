@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from '../../../shared/Button';
 import { AlertIcon } from '../../../svgs/icons';
 
-export default function Form() {
+export default function Form({ isMobile }) {
   const [inputValue, setInputValue] = useState('');
   const [isError, setIsError] = useState(false);
 
@@ -25,7 +25,12 @@ export default function Form() {
   };
 
   return (
-    <form className="newsletter__form" onSubmit={onSubmit}>
+    <form
+      className={`newsletter__form ${
+        !isMobile ? 'newsletter__form--desktop' : ''
+      }`}
+      onSubmit={onSubmit}
+    >
       <div
         className={`newsletter__form-input-container ${isError ? 'error' : ''}`}
       >
@@ -40,12 +45,12 @@ export default function Form() {
             <AlertIcon />
           </div>
         )}
+        {isError && (
+          <p className="newsletter__form-error">
+            Whoops, make sure it&#39;s an email
+          </p>
+        )}
       </div>
-      {isError && (
-        <p className="newsletter__form-error">
-          Whoops, make sure it&#39;s an email
-        </p>
-      )}
       <Button mode="action" width="100%">
         Contact Us
       </Button>

@@ -19,7 +19,7 @@ export default function App() {
               <Features isMobile={isMobile} />
               <Extensions isMobile={isMobile}/>
               <Faq/>
-              <Newsletter />
+              <Newsletter isMobile={isMobile} />
             </>
           )}
         </MatchMedia>
