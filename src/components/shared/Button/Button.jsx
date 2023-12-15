@@ -1,8 +1,8 @@
 import './Button.scss';
 
-export default function Button({ children, mode = 'primary', width = 'null' }) {
+export default function Button({ children, mode = 'primary', width = 'null', ...props }) {
   return (
-    <button className={`btn btn--${mode}`} style={{ width }}>
+    <button {...props} className={`btn btn--${mode}`} style={{ width }}>
       {children}
     </button>
   );
