@@ -1,0 +1,85 @@
+@import '../../../../../styles/variables.scss';
+
+.features__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  font-family: 'Rubik';
+  font-weight: 500;
+  color: $main-grey;
+  border: none;
+  background-color: transparent;
+  transition: color 0.4s;
+  cursor: pointer;
+}
+
+.features__btn:hover {
+  color: $secondary-grey;
+}
+
+.features__btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: .0625rem;
+  background-color: hsl(0, 0, 90%);
+  transition: background-color .4s;
+}
+
+.features__btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10.125rem;
+  height: .21rem;
+  background-color: transparent;
+  transition: background-color .4s;
+}
+
+// .features__btn::after {
+//   content: '';
+//   position: absolute;
+//   bottom: 0;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 10.125rem;
+//   height: .21rem;
+//   background-color: transparent;
+//   transition: background-color .4s;
+// }
+
+// .features__btn::after {
+//   content: '';
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: .0625rem;
+//   background-color: $main-grey;
+//   transition: background-color .4s;
+// }
+
+.features__btn:hover:after {
+  background-color: $main-red;
+}
+
+.features__btn--active {
+  color: $secondary-grey;
+}
+
+.features__btn--active::after {
+  background-color: $main-red;
+}
+
+.features__btn--desktop {
+  width: 10.125rem;
+}

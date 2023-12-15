@@ -1,35 +1,27 @@
-@import '../../../styles/variables.scss';
+@import '../../../../styles/variables.scss';
 
-.header {
+.bookmarking {
   display: grid;
   width: 100%;
-  row-gap: 2rem;
-  margin-top: 1.5rem;
+  row-gap: 4rem;
+  margin-bottom: 10rem;
 }
 
-.header--mobile {
+.bookmarking--mobile {
   grid-template-rows: auto auto;
 
-  .header__hero-picture {
-    grid-row: 1;
-  }
-
-  .header__content {
-    grid-row: 2;
-  }
-
-  .header__content {
+  .bookmarking__content {
     text-align: center;
   }
 }
 
-.header__hero-picture {
+.bookmarking__tab-picture {
   position: relative;
   align-self: center;
   z-index: 1;
 }
 
-.header__content {
+.bookmarking__content {
   justify-self: center;
   display: flex;
   flex-direction: column;
@@ -37,8 +29,9 @@
   align-items: center;
   padding: 1.5rem;
 
-  h1 {
+  h2 {
     font-weight: 500;
+    color: $main-font;
   }
 
   p {
@@ -46,23 +39,15 @@
     letter-spacing: 0.1rem;
     line-height: 1.9rem;
   }
-
-  button:nth-of-type(2) {
-    justify-self: start;
-  }
-
-  button:first-of-type {
-    justify-self: end;
-  }
 }
 
-.header__content-card {
+.bookmarking__content-card {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.header__button-wrapper {
+.bookmarking__button-wrapper {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -70,57 +55,54 @@
   column-gap: .5rem;
 }
 
-.header__hero-picture::before {
+.bookmarking__tab-picture::before {
   content: '';
   position: absolute;
-  left: 20%;
-  top: 22%;
+  right: 17%;
+  top: 17%;
   background-color: $main-blue;
-  height: 78%;
-  width: 80%;
-  border-bottom-left-radius: 25%;
+  height: 96%;
+  width: 100%;
+  border-bottom-right-radius: 27%;
   z-index: -1;
 }
 
-.header--desktop {
+.bookmarking--desktop {
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
-  margin-top: clamp(1.5rem, 2vw, 5rem);
+  column-gap: 4rem;
 
-  h1 {
-    font-size: clamp(2.25rem, 3vw, 3.5rem);
+  h2 {
+    font-size: clamp(1.6875rem, 2.5vw, 2.25rem)
   }
 
-  .header__hero-picture {
+  .bookmarking__tab-picture {
+    padding: 1rem;
     position: relative;
     align-self: center;
     z-index: 1;
   }
 
-  .header__hero-picture::before {
-    content: '';
-    position: absolute;
-    left: 20%;
-    top: 30%;
-    background-color: $main-blue;
-    height: 70%;
+  .bookmarking__tab-picture::before {
+    top: 23%;
+    border-bottom-right-radius: 30%;
     width: 80%;
-    border-bottom-left-radius: 30%;
-    z-index: -1;
+    height: 89%;
   }
 
-  .header__hero-picture::after {
-    content: '';
-    position: absolute;
-    left: 90%;
-    top: 30%;
-    background-color: $main-blue;
-    height: 70%;
-    width: 50vw;
-    z-index: -1;
-  }
+  .bookmarking__tab-picture::after {
+  content: '';
+  position: absolute;
+  right: 90%;
+  top: 23%;
+  background-color: $main-blue;
+  height: 89%;
+  width: 50vw;
+  z-index: -1;
+}
 
-  .header__hero-picture {
+
+  .bookmarking__tab-picture {
     position: relative;
     align-self: center;
     z-index: 1;
@@ -128,7 +110,7 @@
     max-width: 50rem;
   }
 
-  .header__button-wrapper {
+  .bookmarking__button-wrapper {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 50% 50%;
