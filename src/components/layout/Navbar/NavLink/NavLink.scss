@@ -49,8 +49,12 @@
   margin-block: 1rem;
 }
 
+.nav__link--mobile.nav__link--login:hover {
+  border-color: $main-red;
+}
+
 .nav__link--mobile:hover {
-  background-color: $transparent-grey;
+  color: $main-red;
 }
 
 .nav__link--desktop {
