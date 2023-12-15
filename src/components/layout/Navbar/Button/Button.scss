@@ -1,0 +1,15 @@
+@import '../../../../styles/variables.scss';
+
+.nav__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.5rem;
+  font-family: 'Rubik';
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

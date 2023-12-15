@@ -1,4 +1,5 @@
 import './App.scss';
+import Navbar from './components/layout/Navbar';
 import Button from './components/shared/Button';
 import MatchMedia from './components/shared/MatchMedia';
 import {
@@ -24,7 +25,8 @@ import {
 
 export default function App() {
   return (
-    <div className="app">
+    <div className="app" id="app">
+      <Navbar />
       <header>
         <h1>Hello App!</h1>
       </header>
@@ -47,15 +49,16 @@ export default function App() {
         <FacebookIcon />
         <HamburgerIcon />
         <TwitterIcon />
+        <BookmarkLogo isMobileMenu={true} />
       </div>
       <FeaturesTab1 />
       <FeaturesTab2 />
       <FeaturesTab3 />
       <HeroPicture />
       <MatchMedia>
-        {(isDesktop) => (
+        {(isMobile) => (
           <>
-            {isDesktop ? (
+            {isMobile ? (
               <>
                 <ChromeLogo />
                 <OperaLogo />

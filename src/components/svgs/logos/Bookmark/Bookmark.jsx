@@ -1,10 +1,11 @@
-import Svg from '../../../../assets/logos/logo-bookmark.svg';
+import Standard from '../../../../assets/logos/logo-bookmark.svg';
+import Alternative from '../../../../assets/logos/logo-bookmark-mobile.svg';
 import './Bookmark.scss';
 
-export default function BookmarkLogo() {
+export default function BookmarkLogo({ isMobileMenu = false }) {
   return (
     <picture className="picture-bookmark" aria-label="bookmark logo">
-      <Svg />
+      {isMobileMenu ? <Alternative /> : <Standard />}
     </picture>
   );
 }
