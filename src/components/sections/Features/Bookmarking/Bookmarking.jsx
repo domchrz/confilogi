@@ -12,7 +12,7 @@ export default function Bookmarking({ isMobile }) {
       </div>
       <div className="bookmarking__content">
         <div className="bookmarking__content-card">
-          <h2>Bookmark in one click</h2>
+          <h3>Bookmark in one click</h3>
           <div>
             <p>
               A clean and simple interface to organize your favourite websites.

@@ -12,7 +12,7 @@ export default function Sharing({ isMobile }) {
       </div>
       <div className="sharing__content">
         <div className="sharing__content-card">
-          <h2>Effortless sharing</h2>
+          <h3>Effortless sharing</h3>
           <div>
             <p>
               A clean and simple interface to organize your favourite websites.

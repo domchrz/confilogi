@@ -10,7 +10,7 @@ export default function Searching({ isMobile }) {
       </div>
       <div className="searching__content">
         <div className="searching__content-card">
-          <h2>Searching at lightspeed</h2>
+          <h3>Searching at lightspeed</h3>
           <div>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.

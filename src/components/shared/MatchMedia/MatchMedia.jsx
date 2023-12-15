@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const mediaQuery = window.matchMedia('(max-width: 50rem)');
+const mediaQuery = window.matchMedia('(max-width: 60rem)');
 
 export default function MatchMedia({ children }) {
   const [isMobile, setIsMobile] = useState(mediaQuery.matches);
