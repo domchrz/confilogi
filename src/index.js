@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { StoreProvider } from './context/Store';
 import App from './App';
 import './styles/normalize.scss';
+import './styles/global.scss';
 
 const root = createRoot(document.getElementById('root'));
 

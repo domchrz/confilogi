@@ -1,0 +1,36 @@
+@import '../../../styles/variables.scss';
+
+.newsletter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: $main-white;
+  background-color: $main-blue;
+  z-index: 1;
+
+  h2 {
+    color: $main-white;
+  }
+}
+
+.newsletter::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $main-blue;;
+  z-index: -1;
+}
+
+p.newsletter__people-joined {
+    letter-spacing: .5rem;
+    font-size: .72rem;
+    margin-block: .5rem;
+}
