@@ -1,0 +1,13 @@
+@import '../../../styles/variables.scss';
+
+.layout {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  background-color: $main-white;
+}
+
+.layout__wrapper {
+  width: 100%;
+  max-width: 70rem;
+}
