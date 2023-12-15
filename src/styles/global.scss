@@ -19,6 +19,11 @@
     font-weight: 500;
     color: $main-font;
   }
+
+  p {
+    letter-spacing: $p-letter-spacing;
+    line-height: $p-line-height;
+  }
 }
 
 
