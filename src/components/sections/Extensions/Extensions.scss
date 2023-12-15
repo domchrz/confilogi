@@ -11,8 +11,6 @@
 
   p {
     color: $main-grey;
-    letter-spacing: 0.1rem;
-    line-height: 1.9rem;
   }
 }
 
@@ -63,7 +61,7 @@
 .extensions__downloads--desktop {
   grid-template-columns: repeat(3) 1 fr;
   grid-template-rows: 1fr;
-  column-gap: clamp(1rem, 3.4vw, 8rem);
+  column-gap: clamp(1rem, 6.5vw - 1.5rem, 8rem);
   height: 27rem;
   
   div:nth-child(1) {

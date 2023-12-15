@@ -2,8 +2,19 @@
 
 .icon-arrow {
   color: $main-blue;
+  transform: rotate(0);
+  transition: transform .4s, color .4s;
 
   svg {
     width: 1.25rem;
   }
+}
+
+.icon-arrow:hover {
+  color: $main-red;
+}
+
+.icon-arrow--active {
+  color: $main-red;
+  transform: rotate(180deg);
 }

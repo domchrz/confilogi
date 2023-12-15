@@ -1,28 +1,24 @@
-import { useState } from 'react';
 import Button from './Button/Button';
 import './Features.scss';
 import Bookmarking from './Bookmarking';
 import Searching from './Searching';
 import Sharing from './Sharing';
-
-const setTabActive = (tabName) => {
-  const newState = {
-    bookmarking: false,
-    searching: false,
-    sharing: false,
-  };
-
-  newState[tabName] = true;
-
-  return newState;
-};
+import useSelector from '../../../hooks/useSelector';
+import useDispatch from '../../../hooks/useDispatch';
 
 export default function Features({ isMobile }) {
-  const [activeTab, setActiveTab] = useState({
-    bookmarking: true,
-    searching: false,
-    sharing: false,
-  });
+  const areTabsActive = useSelector((state) => state.features);
+  const dispatch = useDispatch();
+
+  const setTabActive = (tabName) => {
+    dispatch({
+      type: 'UPDATE_FEATURES',
+      payload: {
+        feature: tabName,
+        bool: true,
+      },
+    });
+  };
 
   return (
     <section
@@ -40,31 +36,31 @@ export default function Features({ isMobile }) {
         </div>
         <div className="features__nav-button-wrapper">
           <Button
-            isActive={activeTab.bookmarking}
-            onClick={() => setActiveTab(setTabActive('bookmarking'))}
+            isActive={areTabsActive.bookmarking}
+            onClick={() => setTabActive('bookmarking')}
           >
             Simple Bookmarking
           </Button>
           <Button
-            isActive={activeTab.searching}
-            onClick={() => setActiveTab(setTabActive('searching'))}
+            isActive={areTabsActive.searching}
+            onClick={() => setTabActive('searching')}
           >
             Speedy Searching
           </Button>
           <Button
-            isActive={activeTab.sharing}
-            onClick={() => setActiveTab(setTabActive('sharing'))}
+            isActive={areTabsActive.sharing}
+            onClick={() => setTabActive('sharing')}
           >
             Easy Sharing
           </Button>
         </div>
       </div>
       <div className="features__tabs">
-        {activeTab.bookmarking ? (
+        {areTabsActive.bookmarking ? (
           <Bookmarking isMobile={isMobile} />
-        ) : activeTab.searching ? (
+        ) : areTabsActive.searching ? (
           <Searching isMobile={isMobile} />
-        ) : activeTab.sharing ? (
+        ) : areTabsActive.sharing ? (
           <Sharing isMobile={isMobile} />
         ) : (
           <></>
