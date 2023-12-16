@@ -1,0 +1,22 @@
+@import '../../../../styles/variables.scss';
+
+.popup__trigger {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: $main-blue;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px 2px $main-grey;
+  cursor: pointer;
+  // clip-path: polygon(0 0, 100% 0%, 100% 60%, 49% 100%, 0 60%);
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 400;
+    color: $main-white;
+  }
+}

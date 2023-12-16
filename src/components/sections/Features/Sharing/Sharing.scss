@@ -54,6 +54,19 @@
   column-gap: .5rem;
 }
 
+.sharing__tab-picture::before {
+  content: '';
+  position: absolute;
+  right: 15%;
+  top: 17%;
+  background-color: $main-blue;
+  height: 90%;
+  width: 100%;
+  border-bottom-right-radius: 27%;
+  border-top-right-radius: 27%;
+  z-index: -1;
+}
+
 .sharing--desktop {
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
@@ -76,6 +89,24 @@
     z-index: 1;
     width: 50vw;
     max-width: 50rem;
+  }
+
+  .sharing__tab-picture::before {
+    top: 23%;
+    border-bottom-right-radius: 40%;
+    width: 80%;
+    height: 85%;
+  }
+
+  .sharing__tab-picture::after {
+    content: '';
+    position: absolute;
+    right: 90%;
+    top: 23%;
+    background-color: $main-blue;
+    height: 85%;
+    width: 50vw;
+    z-index: -1;
   }
 
   .sharing__button-wrapper {

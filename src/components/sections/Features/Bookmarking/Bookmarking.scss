@@ -51,7 +51,7 @@
   display: grid;
   grid-template-columns: 50% 50%;
   place-items: center;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 }
 
 .bookmarking__tab-picture::before {
@@ -72,7 +72,7 @@
   column-gap: 4rem;
 
   h2 {
-    font-size: clamp(1.6875rem, 2.5vw, 2.25rem)
+    font-size: clamp(1.6875rem, 2.5vw, 2.25rem);
   }
 
   .bookmarking__tab-picture {
@@ -90,16 +90,15 @@
   }
 
   .bookmarking__tab-picture::after {
-  content: '';
-  position: absolute;
-  right: 90%;
-  top: 23%;
-  background-color: $main-blue;
-  height: 89%;
-  width: 50vw;
-  z-index: -1;
-}
-
+    content: '';
+    position: absolute;
+    right: 90%;
+    top: 23%;
+    background-color: $main-blue;
+    height: 89%;
+    width: 50vw;
+    z-index: -1;
+  }
 
   .bookmarking__tab-picture {
     position: relative;
@@ -114,7 +113,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     place-items: center;
-    column-gap: .5rem;
+    column-gap: 0.5rem;
     width: min-content;
 
     button {

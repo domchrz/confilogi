@@ -54,6 +54,18 @@
   column-gap: .5rem;
 }
 
+.searching__tab-picture::before {
+  content: '';
+  position: absolute;
+  right: 17%;
+  top: 17%;
+  background-color: $main-blue;
+  height: 90%;
+  width: 100%;
+  border-bottom-right-radius: 27%;
+  z-index: -1;
+}
+
 .searching--desktop {
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
@@ -68,6 +80,24 @@
     position: relative;
     align-self: center;
     z-index: 1;
+  }
+
+  .searching__tab-picture::before {
+    top: 23%;
+    border-bottom-right-radius: 30%;
+    width: 80%;
+    height: 80%;
+  }
+
+  .searching__tab-picture::after {
+    content: '';
+    position: absolute;
+    right: 90%;
+    top: 23%;
+    background-color: $main-blue;
+    height: 80%;
+    width: 50vw;
+    z-index: -1;
   }
 
   .searching__tab-picture {
