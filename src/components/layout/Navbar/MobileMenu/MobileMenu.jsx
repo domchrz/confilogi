@@ -1,38 +1,30 @@
 import './MobileMenu.scss';
-import { useEffect, useState } from 'react';
 import { CloseIcon, FacebookIcon, TwitterIcon } from '../../../svgs/icons';
 import { BookmarkLogo } from '../../../svgs/logos';
 import Button from '../Button';
 import NavLink from '../NavLink';
+import useWindowHeight from '../../../../hooks/useWindowHeight';
 
 export default function MobileMenu({ closeMenu }) {
-  const [menuHeight, setMenuHeight] = useState(window.innerHeight);
-  
-  useEffect(() => {
-    const listener = () => setMenuHeight(window.innerHeight);
-
-    window.addEventListener('resize', listener);
-
-    return () => window.removeEventListener('resize', listener);
-  }, []);
+  const windowHeight = useWindowHeight();
 
   return (
-    <div className="nav__mobile-menu" style={{ height: menuHeight }}>
+    <div className="nav__mobile-menu" style={{ height: windowHeight }}>
       <div>
-        <header className='nav__mobile-menu-header'>
+        <header className="nav__mobile-menu-header">
           <BookmarkLogo isMobileMenu={true} />
           <Button onClick={() => closeMenu()}>
             <CloseIcon />
           </Button>
         </header>
-        <div className='nav__mobile-menu-links'>
+        <div className="nav__mobile-menu-links">
           <NavLink>FEATURES</NavLink>
           <NavLink>PRICING</NavLink>
           <NavLink>CONTACT</NavLink>
           <NavLink isLoginLink={true}>LOGIN</NavLink>
         </div>
       </div>
-      <div className='nav__mobile-menu-social'>
+      <div className="nav__mobile-menu-social">
         <FacebookIcon />
         <TwitterIcon />
       </div>

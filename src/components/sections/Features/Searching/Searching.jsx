@@ -13,10 +13,8 @@ export default function Searching({ isMobile }) {
           <h3>Searching at lightspeed</h3>
           <div>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestias beatae impedit distinctio maxime illum. Quos assumenda
-              vero quo dolorem, debitis ullam tenetur minima. Temporibus saepe
-              repudiandae ratione, voluptas sit nesciunt.
+              Our powerful search feature will help you find saved sites in no
+              time at all. No need to trawl through all of your bookmarks.
             </p>
           </div>
           {!isMobile && <Button width="9rem">More info</Button>}

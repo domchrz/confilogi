@@ -1,16 +1,22 @@
 @import '../../../../styles/variables.scss';
 
-.nav__btn {
+.popup__btn {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   width: fit-content;
-  color: $main-white;
-  padding: 0.5rem;
+  color: $main-font;
+  padding: 1rem;
   font-family: 'Rubik';
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
+
+.popup__btn:hover {
+  color: $main-red;
+}
+
+

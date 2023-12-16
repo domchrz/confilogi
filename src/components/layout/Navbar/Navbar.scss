@@ -1,14 +1,12 @@
 @import '../../../styles/variables.scss';
 
 .nav {
-  top: 0;
-  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 1.8rem;;
   background-color: $main-white;
-  z-index: 1000;
+  z-index: 99;
 }
 
 .nav::before {
