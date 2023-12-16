@@ -14,7 +14,7 @@ export default function PopUp({ isMobile }) {
   const openPopUp = () => setIsOpen(true);
 
   useEffect(() => {
-    const timeout = setTimeout(openPopUp, 5000);
+    const timeout = setTimeout(openPopUp, 30000);
 
     if (shouldClearTimout) {
       clearTimeout(timeout);
